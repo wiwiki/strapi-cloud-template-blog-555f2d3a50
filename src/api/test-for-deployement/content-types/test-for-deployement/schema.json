@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_for_deployements",
+  "info": {
+    "singularName": "test-for-deployement",
+    "pluralName": "test-for-deployements",
+    "displayName": "test for deployement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hope": {
+      "type": "string"
+    }
+  }
+}
