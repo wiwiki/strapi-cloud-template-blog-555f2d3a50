@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entreprises",
+  "info": {
+    "singularName": "entreprise",
+    "pluralName": "entreprises",
+    "displayName": "Entreprise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "entrepriseName": {
+      "type": "string"
+    }
+  }
+}
