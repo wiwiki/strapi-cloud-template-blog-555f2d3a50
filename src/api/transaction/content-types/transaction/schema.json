@@ -13,6 +13,12 @@
   "attributes": {
     "orderNumber": {
       "type": "uid"
+    },
+    "enterprise": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::entreprise.entreprise",
+      "inversedBy": "transactions"
     }
   }
 }
