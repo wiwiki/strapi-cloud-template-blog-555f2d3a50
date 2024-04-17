@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_up_transactions",
+  "info": {
+    "singularName": "top-up-transaction",
+    "pluralName": "top-up-transactions",
+    "displayName": "topUpTransaction"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "emailUser": {
+      "type": "email"
+    },
+    "stripeID": {
+      "type": "string"
+    }
+  }
+}

@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -71,6 +70,9 @@
       "relation": "manyToOne",
       "target": "api::entreprise.entreprise",
       "inversedBy": "users_permissions_users"
+    },
+    "userBalance": {
+      "type": "decimal"
     }
   }
 }

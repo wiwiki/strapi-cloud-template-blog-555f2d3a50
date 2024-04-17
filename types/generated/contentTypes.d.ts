@@ -449,6 +449,38 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiTopUpTransactionTopUpTransaction
+  extends Schema.CollectionType {
+  collectionName: 'top_up_transactions';
+  info: {
+    singularName: 'top-up-transaction';
+    pluralName: 'top-up-transactions';
+    displayName: 'topUpTransaction';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    emailUser: Attribute.Email;
+    stripeID: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::top-up-transaction.top-up-transaction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::top-up-transaction.top-up-transaction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTransactionTransaction extends Schema.CollectionType {
   collectionName: 'transactions';
   info: {
@@ -812,7 +844,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -846,6 +877,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'api::entreprise.entreprise'
     >;
+    userBalance: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -922,6 +954,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::entreprise.entreprise': ApiEntrepriseEntreprise;
       'api::product.product': ApiProductProduct;
+      'api::top-up-transaction.top-up-transaction': ApiTopUpTransactionTopUpTransaction;
       'api::transaction.transaction': ApiTransactionTransaction;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
