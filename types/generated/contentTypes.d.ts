@@ -374,7 +374,7 @@ export interface ApiEntrepriseEntreprise extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    entrepriseName: Attribute.String;
+    enterpriseName: Attribute.String;
     codeDep: Attribute.UID;
     managerEmail: Attribute.Email;
     entrepriseBalance: Attribute.Decimal;

@@ -10,7 +10,7 @@ module.exports = createCoreController('api::transaction.transaction', ({ strapi 
     async customAction(ctx) {
       try {
         console.log('Request received:', ctx.request.body);
-  
+
         const userId = ctx.request.body.userId;
         const productId = ctx.request.body.productId;
         const entrepriseId = ctx.request.body.entrepriseId;
