@@ -377,7 +377,7 @@ export interface ApiEntrepriseEntreprise extends Schema.CollectionType {
     enterpriseName: Attribute.String;
     codeDep: Attribute.UID;
     managerEmail: Attribute.Email;
-    entrepriseBalance: Attribute.Decimal;
+    enterpriseBalance: Attribute.Decimal;
     products: Attribute.Relation<
       'api::entreprise.entreprise',
       'oneToMany',
